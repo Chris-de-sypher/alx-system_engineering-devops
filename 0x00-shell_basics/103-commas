@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1a | sort -d -f -k1,1n | sed 's/$/\//' | tr '\n' ',' && echo
+ls -a1 -X | sed -e 's/^\.\{1,2\}$/&\//' | paste -sd,
